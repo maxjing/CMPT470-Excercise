@@ -1,0 +1,26 @@
+body {
+  background-color: #228;
+}
+h1 {
+  background-color: white;
+  text-align: center;
+}
+#main {
+  background-color: white;
+}
+#menu {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+}
+
+#menu li {
+  display: inline-block;
+  background-color: #bbb;
+}
+
+#menu li a {
+  color: black;
+}

@@ -1,0 +1,26 @@
+h1 {
+  float: left;
+}
+
+#menu {
+  float: right;
+  width: 120px;
+  background-color: #64a;
+  padding-left: 15px;
+}
+#menu li {
+  background-color: #66c;
+  list-style-type: none;
+  margin: 3px;
+}
+
+#menu li a {
+  padding: 5px;
+  color: white;
+  text-decoration: none;
+}
+
+#main {
+  margin-top: -20px;
+  clear: left;
+}

@@ -1,0 +1,23 @@
+1. 
+Type: insufficient authorization
+Problem: view other users' contact information without user permission
+Detail: For current user to view a friend information can be only allowed after the user shared the contacts with current user through this url https://ggbaker.ca/security/friends/username/, but it is easy for the current user to change part after "/friend/" with any other username to view other users.
+
+2. 
+Type: insufficient authorization
+Problem: view users' contact information even not created by the current user
+Detail: Current user have the permission to view contacts that created by himself, but not created by others through https://ggbaker.ca/security/people/username/. It is easy for the current user to change part after "/people/" with any other username to view other contacts created by other people.
+
+3. 
+Type: CSRF 
+Problem: When creating new contacts and click the submit button, the POST request does not come with a token, this request cannot be verified by server 
+Detail: Submit button will send a post request to server side, other websites can use same url to perform this post request which will lead database been filled by garbage data
+
+4. 
+Type: CSRF 
+Problem: When editing existing contacts and click submit button, the POST request does not come with a token, this request cannot be verified by server 
+Detail: Submit button will send a post request to server side, other websites can use same url to perform this post request which will causing database information changed by unauthorized person
+
+5.
+Type: XSS
+Problem: When add new person, the name input can be inject Javascript code, which will leads to actions that it should not be

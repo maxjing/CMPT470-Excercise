@@ -1,0 +1,8 @@
+#paragraphs {
+  columns: 3;
+}
+
+#gradient {
+  height: 120px;
+  background-image: radial-gradient(aqua, green);
+}
